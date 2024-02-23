@@ -2,7 +2,16 @@
 
 int search(int numbers[], int low, int high, int value) 
 {
+	if(numbers == NULL)
 	return -1;
+
+	if (low <= high){
+		if (numbers[low]== value){
+			return numbers[low];
+		}
+		else 
+		search(numbers,low+1,high,value);
+	}
 }
 
 void printArray(int numbers[], int sz)
